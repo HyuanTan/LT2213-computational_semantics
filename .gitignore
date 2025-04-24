@@ -1,0 +1,9 @@
+*.pyc
+*.zip
+*.txt
+project/A2_Vector_semantics/02-vector-semantics-assignment/wikipedia/
+project/A2_Vector_semantics/02-vector-semantics-assignment/pretrained/
+project/A2_Vector_semantics/02-vector-semantics-assignment/pretrained_1k/
+project/A2_Vector_semantics/02-vector-semantics-assignment/test/
+project/A2_Vector_semantics/test.py
+project/A2_Vector_semantics/02-vector-semantics-assignment.zip
