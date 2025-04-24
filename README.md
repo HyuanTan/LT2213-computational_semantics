@@ -21,8 +21,8 @@ Larger files and software that doesn't fit to GitHub can be found in /srv/data/c
 
 
 # Install
+
 ```
-pip3 install spacy
-python3 -m spacy download en_core_web_sm
+pip install -r requirements.txt
 
 ```
