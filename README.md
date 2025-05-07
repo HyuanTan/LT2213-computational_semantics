@@ -26,3 +26,10 @@ Larger files and software that doesn't fit to GitHub can be found in /srv/data/c
 pip install -r requirements.txt
 
 ```
+
+# Pytorch Install
+```
+# under venv 
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+```
