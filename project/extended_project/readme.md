@@ -1,4 +1,5 @@
 # Do Vision and Language Models Share Concepts? A Vector Space Alignment Study
+## Install
 [VLCA](https://github.com/jiaangli/VLCA)
 ```
 git clone git@github.com:jiaangli/VLCA.git
@@ -41,11 +42,26 @@ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge
 bash Miniforge3-Linux-x86_64.sh
 # 按照提示安装到 ~/miniforge3
 
+unalias python
 source ~/miniforge3/bin/activate
 
-conda create -n vlca python=3.11
+
+# conda create -n vlca python=3.11
+conda create -n vlca python=3.11 -c conda-forge
 conda activate vlca
-pip install -r requirements.txt
+
+# which python
+# ~/miniforge3/envs/vlca/bin/python
+
+pip install pyparsing decorator pexpect pygments markdown lxml
+pip install cffi
+pip install soundfile --force-reinstall
+
+
+python -m pip install -r requirements.txt
+python -m pip install datasets==2.16.0 numpy==1.26.4 pyarrow==14.0.2 --force-reinstall
+python -m pip install accelerate
+
 
 ```
 
@@ -68,7 +84,23 @@ conda install -c conda-forge faiss
 
 
 # 测试
+```
+
+unalias python
+source ~/miniforge3/bin/activate
+conda activate vlca
+
+conda deactivate
+
+huggingface-cli login
+The current active token is: `vlca-project`
+
+python -m pip install wandb
+wandb login
+
+export DATASET_ROOT=/home/gushuota@GU.GU.SE/LT2213-computational_semantics/project/extended_project/VLCA/data
 python main.py +model=gpt2 +dataset=cldi muse.exp_type=BASE
+```
 
 
 # Vision Models
